@@ -6,8 +6,11 @@ Following the UNIX Design, doing only 1 thing, doing it well, the goal of this p
 * use Ubuntu upstream Cloud Image.
 * use cloudinit for installing openSUSE saltstack packages, and other minimal configurations.
 
-Once the VM is created, you can boostrap this VM against your Uyuni-Server. (this is outside the scope of this project)
+Once the VM is created, you can boostrap this VM instance against your Uyuni-Server. (this is outside the scope of this project)
 
+
+# Requirements:
+This project need at **least** terraform-provider-libvirt >= 0.5 version (https://github.com/dmacvicar/terraform-provider-libvirt/releases)
 
 # USER Documentation
 
@@ -22,20 +25,22 @@ terraform apply
 
 # Installation:
 
-We will use only https://github.com/dmacvicar/terraform-provider-libvirt  as dependency.
+If you don't have `terraform` and `terraform-provider-libvirt` installed:
 
-For installing the terraform-libvirt-provider have a look on release:
-https://github.com/dmacvicar/terraform-provider-libvirt/releases
 
-You will also need the terraform golang binary.
+* terraform
+https://www.terraform.io/downloads.html
+
+* libvirt
 https://github.com/dmacvicar/terraform-provider-libvirt#installing
-
-You can also use the pkgs https://github.com/dmacvicar/terraform-provider-libvirt#using-packages
-And you will have an Ubuntu Instance with openSUSE salt-pkgs.
 
 ## Design of this project.
 ![arch](design_doc/architecture.jpg)
 
+
+# Developer Documentation:
+
+Have a look [Here](CONTRIBUTING.md)
 
 ### Additional steps: boostrapping ubuntu image against SUSE-Manager.
 
@@ -43,8 +48,3 @@ With the VM and the ip of your Ubuntu Server, you can then boostrap the minion a
 This is out of scope of this project.
 
 ![boostrap](design_doc/boostrap.jpg)
-
-
-# Developer Documentation:
-
-At moment this is under development.
