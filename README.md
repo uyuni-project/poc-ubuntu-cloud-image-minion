@@ -1,5 +1,13 @@
 # ubuntu-cloud-image-minion
 
+## "WARNING: This is a PoC repository to be used until cloud-init support is ready for sumaform, and will be removed after that" (https://github.com/moio/sumaform)
+
+## Take this  repo as learning and experimental resource.
+
+
+
+
+
 Following the UNIX Design, doing only 1 thing, doing it well, the goal of this project is:
 
 * deploy with terraform-libvirt-provider
